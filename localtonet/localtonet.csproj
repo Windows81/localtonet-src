@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1A326E87-CA18-4AC8-A9C1-F3C65CFC84ED}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>localtonet</RootNamespace>
+    <AssemblyName>localtonet</AssemblyName>
+    <TargetFrameworkVersion>v7.0</TargetFrameworkVersion>
+    <TargetFrameworkIdentifier>.NETCoreApp</TargetFrameworkIdentifier>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>localtonet.ico</ApplicationIcon>
+    <StartupObject>ExposeLocalhostNet.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Client">
+      <HintPath>..\..\..\..\localtonet\Microsoft.AspNetCore.SignalR.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.SignalR.Client.Core">
+      <HintPath>..\..\..\..\localtonet\Microsoft.AspNetCore.SignalR.Client.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\localtonet\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RabbitMQ.Client">
+      <HintPath>..\..\..\..\localtonet\RabbitMQ.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog">
+      <HintPath>..\..\..\..\localtonet\Serilog.dll</HintPath>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Seq">
+      <HintPath>..\..\..\..\localtonet\Serilog.Sinks.Seq.dll</HintPath>
+    </Reference>
+    <Reference Include="Spectre.Console">
+      <HintPath>..\..\..\..\localtonet\Spectre.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Concurrent">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Collections.Concurrent.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Specialized">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Collections.Specialized.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration.ConfigurationManager">
+      <HintPath>..\..\..\..\localtonet\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.ZipFile">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Linq">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.HttpListener">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Net.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.IPNetwork">
+      <HintPath>..\..\..\..\localtonet\System.Net.IPNetwork.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.NameResolution">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Net.NameResolution.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Ping">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Net.Ping.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Primitives">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Net.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Security">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Net.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Claims">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Security.Claims.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Security.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.RegularExpressions">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Text.RegularExpressions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.HttpUtility">
+      <HintPath>..\..\..\..\..\..\program files\dotnet\shared\Microsoft.NETCore.App\7.0.5\System.Web.HttpUtility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ExposeLocalhostNet\ApplicationLogging.cs" />
+    <Compile Include="ExposeLocalhostNet\ApplicationSettings.Designer.cs">
+      <DependentUpon>ApplicationSettings.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ExposeLocalhostNet\ClientThread.cs" />
+    <Compile Include="ExposeLocalhostNet\CommonService.cs" />
+    <Compile Include="ExposeLocalhostNet\FileServerService.cs" />
+    <Compile Include="ExposeLocalhostNet\HttpProxyClient.cs" />
+    <Compile Include="ExposeLocalhostNet\HttpProxyClientRelay.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\ClientRelayPort.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\FileInfoDetail.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\FileServerIndexModel.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\FileServer\IsAuthResponseModel.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\FileServer\SettingFileServer.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\FileServer\UserRoleFileServer.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\HttpInceptor\ReplayRequestModel.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\HttpInceptor\RequestModel.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\HttpInceptor\ResponseModel.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\LoadBalance.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\MyIp.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\ProxyIpHistory.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\RequestLog.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\ServerInfo.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\SessionStatus.cs" />
+    <Compile Include="ExposeLocalhostNet\Models\UserInfo.cs" />
+    <Compile Include="ExposeLocalhostNet\Program.cs" />
+    <Compile Include="ExposeLocalhostNet\RelayClientServer.cs" />
+    <Compile Include="ExposeLocalhostNet\Services\AccessControlListService.cs" />
+    <Compile Include="ExposeLocalhostNet\Services\RequestLogService.cs" />
+    <Compile Include="ExposeLocalhostNet\SignalRClient.cs" />
+    <Compile Include="ExposeLocalhostNet\SimpleHttpServer.cs" />
+    <Compile Include="ExposeLocalhostNet\Socks5ProxyClient.cs" />
+    <Compile Include="ExposeLocalhostNet\Socks5ProxyClientRelay.cs" />
+    <Compile Include="ExposeLocalhostNet\TcpLocalClientNew.cs" />
+    <Compile Include="ExposeLocalhostNet\TcpLocalClientRelay.cs" />
+    <Compile Include="ExposeLocalhostNet\UdpClientLocalToNet.cs" />
+    <Compile Include="ExposeLocalhostNet\UdpLocalClient.cs" />
+    <Compile Include="ExposeLocalhostNet\UdpLocalClientRelay.cs" />
+    <Compile Include="ExposeLocalhostNet\Views\FileServerIndex.cs" />
+    <Compile Include="ExposeLocalhostNet\Views\FileServerIndexBase.cs" />
+    <Compile Include="Microsoft\CodeAnalysis\EmbeddedAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\NullableContextAttribute.cs" />
+    <Compile Include="System\Runtime\CompilerServices\RefSafetyRulesAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="ExposeLocalhostNet\ApplicationSettings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>ApplicationSettings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
